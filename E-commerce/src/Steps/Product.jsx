@@ -1,7 +1,8 @@
 import React from 'react'
-import Nav from '../Nav';
-import Footer from '../Footer';
-import Options from '../options';
+import Nav from '../Components/Nav';
+import Footer from '../Components/Footer';
+import Options from '../Components/options';
+import category from '../Images/category.png'
 
 function Product() {
     return (
@@ -13,7 +14,8 @@ function Product() {
                 <h2 className='text-sm'>Our most popular products based on sales</h2>
             </div>
             <div>
-                <h1></h1>
+                <div> <img src={category}></img>  <h1></h1></div>
+
             </div>
 
             <Footer></Footer>

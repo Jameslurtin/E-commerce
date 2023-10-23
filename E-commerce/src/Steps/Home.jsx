@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { IoIosArrowForward } from 'react-icons/io';
-import Footer from './Footer';
+import Footer from '../Components/Footer';
 import Firstimg from '../Images/First-image.png';
 import Rectangle1 from '../Images/Rectangleimg 1.png';
 import Rectangle2 from '../Images/Rectangleimg 2.png';
@@ -16,15 +16,15 @@ import dove from '../Images/Dove.png';
 import zara from '../Images/Zara.png'
 import Cvs from '../Images/CVS Pharmacy.png';
 import Colgate from '../Images/Colgate.png';
-import Cerave  from '../Images/CeraVe.png';
-import Nav from './Nav';
+import Cerave from '../Images/CeraVe.png';
+import Nav from '../Components/Nav';
 
 
 
 
 function Home() {
 
-    
+
     const settings = {
         dots: true,
         infinite: true,
@@ -88,12 +88,12 @@ function Home() {
             </div>
 
             <div className='flex items-center justify-start gap-3 px-20 py-4'>
-             <img src={nike}></img>
-             <img src={dove}></img>
-             <img src={louis}></img>
-             <img src={Cvs}></img>
-             <img src={Colgate}></img>
-             <img src={Cerave}></img>
+                <img src={nike}></img>
+                <img src={dove}></img>
+                <img src={louis}></img>
+                <img src={Cvs}></img>
+                <img src={Colgate}></img>
+                <img src={Cerave}></img>
 
             </div>
             <Footer></Footer>

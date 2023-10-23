@@ -3,8 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from './Components/Home';
-import Product from './Components/Steps/Product';
+import Home from './Steps/Home';
+import Product from './Steps/Product';
 
 
 function App() {
@@ -14,13 +14,13 @@ function App() {
 
     <div>
       <BrowserRouter>
-      <Routes>
-        <Route path="/Home" element={<Home />}>
-        </Route>
-        <Route path="/Product-page" element={<Product />}>
-        </Route>
-      </Routes>
-    </BrowserRouter>
+        <Routes>
+          <Route path="/Home" element={<Home />}>
+          </Route>
+          <Route path="/Product-page" element={<Product />}>
+          </Route>
+        </Routes>
+      </BrowserRouter>
 
 
     </div>
