@@ -36,7 +36,7 @@ function Cart() {
                                 <button className='bg-red-500 text-white py-1 px-2 rounded'>Remove</button>
                             </td>
                         </tr>
-                        {/* Add vertical padding between product rows */}
+        
                         <tr className='border-b border-[#404040] py-4'>
                             <td className='py-2 px-4 flex items-center'>
                                 <img src={rec} className='w-16 h-16 mr-4' alt='Product' />

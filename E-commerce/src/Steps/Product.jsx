@@ -73,7 +73,6 @@ function Product() {
                             <h2>$39.99 - $30.65</h2>
                         </div>
 
-
                         <img src={product3}></img>
                         <div>
                             <h1>lorem ipsum fire tv with alexa voice remote
@@ -89,7 +88,7 @@ function Product() {
                             <button className=' bg-primary px-7 w-52  rounded-md  '>2</button>
                             <button className=' bg-primary px-7 w-52  rounded-md  '> 3</button>
                             <button className=' bg-primary px-7 w-52  rounded-md  '> 4</button>
-                            <button className='flex items-center bg-primary px-7 w-52  rounded-md  '> Next page<AiOutlineArrowRight></AiOutlineArrowRight></button>
+                            <button className='flex items-center bg-primary px-10 w-52  rounded-md  '> Next page<AiOutlineArrowRight></AiOutlineArrowRight></button>
                         </div>
 
                     </div>
