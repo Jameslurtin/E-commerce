@@ -2,6 +2,7 @@ import React from 'react'
 import Options from '../Components/options';
 import Nav from '../Components/Nav';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 function Completed() {
   return (
@@ -17,7 +18,7 @@ function Completed() {
             <h3>Your order number is #11234556423146230</h3>
             <h4>You’ll receive an email confirming your order details</h4>
             <button className='bg-[#0B8BA6] px-32 rounded-md text-white'>Track Your Order</button>
-            <h5>Back to Home</h5>
+            <Link to = '/Home' target='_parent'><h5>Back to Home</h5></Link>
         </div>
        
     </div>

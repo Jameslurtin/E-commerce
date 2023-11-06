@@ -32,7 +32,8 @@ function Home() {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-    };
+        
+      };
 
     return (
         <div>
@@ -40,7 +41,7 @@ function Home() {
 
         
             <div className='my-6   '>
-                <Slider {...settings}>
+                <Slider >
 
 
                     <div>
@@ -70,7 +71,7 @@ function Home() {
 
                 <h2 className='font-dm font-bold text-2xl flex items-center '>| See all<IoIosArrowForward ></IoIosArrowForward></h2>
             </div>
-            <Link to="/Product-page" className='font-dm font-bold text-2xl flex items-center'>
+            <Link to="/Product-page" target="_parent">
             <div className='flex items-center justify-center gap-7 py-3 px-20 '>
 
             

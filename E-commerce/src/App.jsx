@@ -13,6 +13,8 @@ import Address from './Steps/Address';
 import Shipping from './Steps/Shipping';
 import Payment from './Steps/Payment';
 import Review from './Steps/Review';
+import Aboutus from './Steps/Aboutus';
+import Contactus from './Steps/Contactus';
 
 
 function App() {
@@ -43,6 +45,10 @@ function App() {
           <Route path="/Payment" element={<Payment />}>
           </Route>
           <Route path="/Review" element={<Review />}>
+          </Route>
+          <Route path="/Aboutus" element={<Aboutus/>}>
+          </Route>
+          <Route path="/Contactus" element={<Contactus/>}>
           </Route>
           
           

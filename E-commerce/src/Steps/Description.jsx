@@ -16,6 +16,7 @@ import BarChart from '../Components/BarChart';
 import pro1 from '../Images/proreview.png';
 import pro2 from '../Images/proreview1.png';
 import pro3 from '../Images/proreview2.png';
+import { Link } from 'react-router-dom';
 
 
 const reviews = [
@@ -31,7 +32,7 @@ const reviews = [
         rating: 5,
         comment: 'Excellent quality and fast delivery.',
     },
-    // Add more reviews as needed
+
 ];
 
 function Description() {
@@ -109,7 +110,9 @@ function Description() {
                         <button className='bg-primary text-white px-3 rounded-sm'>Qty: 1</button>
                     </div>
                     <div className='flex flex-col px-5 gap-5'>
-                        <button className='bg-primary text-white py-3 rounded-sm'>Contact supplier</button>
+                   
+                        <button className='bg-primary text-white py-3  rounded-sm'> <Link to='/Address'target='_parent'>Contact supplier</Link></button>
+                        
                         <button className='text-primary border-2 border-primary py-3 rounded-sm'>Chat now</button>
                     </div>
                     <h5 className='font-bold text-xl px-5'>Purchase details</h5>

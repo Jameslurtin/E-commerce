@@ -9,6 +9,7 @@ import product2 from '../Images/product image2.png';
 import product3 from '../Images/product image3.png';
 import rating from '../Images/Ratings.png';
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 
 
@@ -28,59 +29,74 @@ function Product() {
                         <h1 className='text-xl'>Categories</h1>
                     </div>
                     <ul className='font-semibold flex flex-col gap-1'>
-                        <li className='text-primary'>Facial Cleanser</li>
-                        <li>Pomade</li>
-                        <li>Perfumes</li>
-                        <li>Baby Powder</li>
-                        <li>Eye Liner</li>
-                        <li>Lip Clippers</li>
+                        <li className='hover:text-primary'>Facial Cleanser</li>
+                        <li className='hover:text-primary' >Pomade</li>
+                        <li className='hover:text-primary'>Perfumes</li>
+                        <li className='hover:text-primary'>Baby Powder</li>
+                        <li className='hover:text-primary'>Eye Liner</li>
+                        <li className='hover:text-primary'>Lip Clippers</li>
                     </ul>
                 </div>
                 <div className='font-dm  px-10 '>
-                    <h1 className='font-bold'>Beauty & Personal Care</h1>
+                    <h1 className='font-bold text-xl'>Beauty & Personal Care</h1>
 
                 </div>
                 <div className='flex gap-32'>
 
 
-                    <div className='flex flex-col w-60 py-20 gap-14'>
-                        <img src={product}></img>
-                        <div>
-                            <h1>lorem ipsum fire tv with alexa voice remote
-                                <span>Tv etc.</span></h1>
-                            <img src={rating}></img>
-                            <h2>$39.99 - $30.65</h2>
+                    <div className='flex flex-col  py-20 gap-14 w-[700px]'>
+                        <Link to='/product-description' target='_parent'>
+                            <div>
+                                <div className='flex gap-32'>
+                                    <div>
+                                        <img src={product}></img>
+                                        <div className=' '>
+                                            <h1>lorem ipsum fire tv with alexa voice remote
+                                                <span>Tv etc.</span></h1>
+                                            <img src={rating}></img>
+                                            <h2>$39.99 - $30.65</h2>
+                                        </div>
+                                    </div>
+                                    <div >
+                                        <img src={product2}></img>
+                                        <div className=''>
+                                            <h1>lorem ipsum fire tv with alexa voice remote
+                                                <span>Tv etc.</span></h1>
+                                            <img src={rating}></img>
+                                            <h2>$39.99 - $30.65</h2>
 
-                        </div>
-                        <img src={product2}></img>
-                        <div>
-                            <h1>lorem ipsum fire tv with alexa voice remote
-                                <span>Tv etc.</span></h1>
-                            <img src={rating}></img>
-                            <h2>$39.99 - $30.65</h2>
+                                        </div>
+                                    </div>
+                                </div>
 
 
-                        </div>
+                            </div>
+                            <div>
+                                <div className='flex gap-32'>
+                                    <div>
+                                        <img src={product1}></img>
+                                        <div className=' '>
+                                            <h1>lorem ipsum fire tv with alexa voice remote
+                                                <span>Tv etc.</span></h1>
+                                            <img src={rating}></img>
+                                            <h2>$39.99 - $30.65</h2>
+                                        </div>
+                                    </div>
+                                    <div >
+                                        <img src={product3}></img>
+                                        <div className=''>
+                                            <h1>lorem ipsum fire tv with alexa voice remote
+                                                <span>Tv etc.</span></h1>
+                                            <img src={rating}></img>
+                                            <h2>$39.99 - $30.65</h2>
+
+                                        </div>
+                                    </div>
+                                </div>
 
 
-                    </div>
-                    <div className='w-60 py-20 flex flex-col gap-14 '>
-                        <img src={product1}></img>
-                        <div>
-                            <h1>lorem ipsum fire tv with alexa voice remote
-                                <span>Tv etc.</span></h1>
-                            <img src={rating}></img>
-                            <h2>$39.99 - $30.65</h2>
-                        </div>
-
-                        <img src={product3}></img>
-                        <div>
-                            <h1>lorem ipsum fire tv with alexa voice remote
-                                <span>Tv etc.</span></h1>
-                            <img src={rating}></img>
-                            <h2>$39.99 - $30.65</h2>
-
-                        </div>
+                            </div>
+                        </Link>
                         <div className='flex justify-center text-white gap-3 py-3 '>
                             <button className='flex items-center bg-primary px-14  rounded-md  '> <AiOutlineArrowLeft></AiOutlineArrowLeft>Previous page</button>
 
