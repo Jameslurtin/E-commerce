@@ -9,7 +9,6 @@ import Description from './Steps/Description';
 import Completed from './Steps/completed';
 import Cart from './Steps/Cart';
 import Profile from './Steps/Profile';
-import Order from './Components/Order';
 import Address from './Steps/Address';
 import Shipping from './Steps/Shipping';
 import Payment from './Steps/Payment';
