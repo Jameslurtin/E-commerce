@@ -48,11 +48,11 @@ function Nav() {
       <div className='flex justify-center items-center text-lg px-40 '>
         <nav className='flex gap-5'>
           <a><Link to ='/Home'target='_parent'>Home</Link></a>
-          <a><Link to ='/Aboutus'>About Us</Link></a>
-          <a><Link to ='/product-page'>Shop</Link></a>
-          <a><Link to ='/Contactus'>Contact Us</Link></a>
-          <a><Link to ='/profile'>My Account</Link></a>
-          <a className='flex justify-center items-center'><span><BsCartPlusFill /></span><Link to ='/cart'>Cart</Link></a>
+          <a><Link to ='/Aboutus'target='_parent'>About Us</Link></a>
+          <a><Link to ='/product-page'target='_parent'>Shop</Link></a>
+          <a><Link to ='/Contactus'target='_parent'>Contact Us</Link></a>
+          <a><Link to ='/profile'target='_parent'>My Account</Link></a>
+          <a className='flex justify-center items-center'><span><BsCartPlusFill /></span><Link to ='/cart'target='_parent'>Cart</Link></a>
         </nav>
       </div>
     </div>

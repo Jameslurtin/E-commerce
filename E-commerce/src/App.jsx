@@ -15,6 +15,7 @@ import Payment from './Steps/Payment';
 import Review from './Steps/Review';
 import Aboutus from './Steps/Aboutus';
 import Contactus from './Steps/Contactus';
+import Sigin from './Steps/Sigin';
 
 
 function App() {
@@ -49,6 +50,8 @@ function App() {
           <Route path="/Aboutus" element={<Aboutus/>}>
           </Route>
           <Route path="/Contactus" element={<Contactus/>}>
+          </Route>
+          <Route path="/Signin" element={<Sigin/>}>
           </Route>
           
           

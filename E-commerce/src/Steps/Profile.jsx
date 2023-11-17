@@ -12,6 +12,7 @@ import { CiLocationOn } from 'react-icons/ci';
 import { LuSettings } from 'react-icons/lu';
 import { FiHelpCircle } from 'react-icons/fi';
 import { GoSignOut } from 'react-icons/go';
+import { Link } from 'react-router-dom';
 
 
 function Profile() {
@@ -19,7 +20,7 @@ function Profile() {
         <div >
             <Nav></Nav>
             <Options></Options>
-            <div className='flex px-20 py-7 '>
+            <div className='flex px-20 py-5 '>
                 <div className='  border-2 border-black w-80 ' >
                     <div className='h-[400px] bg-[#0B8BA6] text-white '  >
                         <div className='flex flex-col items-center justify-center py-3 font-dm '>
@@ -37,16 +38,10 @@ function Profile() {
 
 
                     </div>
-                    <div className='flex flex-col gap-5 pt-5  font-dm font-bold'>
-                        <h1 className='flex items-center gap-2 px-10 py-3 hover:bg-[#0B8BA6] hover:text-white'><span><AiOutlineWallet></AiOutlineWallet></span>  My wallet</h1>
-                        <h2 className='flex items-center gap-2 px-10 py-3 hover:bg-[#0B8BA6] hover:text-white'><span><GiWantedReward></GiWantedReward></span> My rewards</h2>
-                        <h3 className='flex items-center gap-2 px-10 py-3 hover:bg-[#0B8BA6] hover:text-white'><span><MdOutlineLocalShipping></MdOutlineLocalShipping></span>Orders</h3> 
-                        <h1 className='flex items-center gap-2 px-10 py-3 hover:bg-[#0B8BA6] hover:text-white'><span><CiLocationOn></CiLocationOn></span> Location</h1>
-                        <h2 className='flex items-center gap-2 px-10 py-3 hover:bg-[#0B8BA6] hover:text-white'><span><MdPayments></MdPayments></span> Payment Method</h2>
-                        <h3 className='flex items-center gap-2 px-10 py-3 hover:bg-[#0B8BA6] hover:text-white'><span><LuSettings></LuSettings></span> Contact Preferences</h3> 
-                        <h1 className='flex items-center gap-2 px-10 py-3 hover:bg-[#0B8BA6] hover:text-white'><span><BsPersonCircle></BsPersonCircle></span> Personal Information</h1>
-                        <h4 className='flex items-center gap-2 px-10 py-3 hover:bg-[#0B8BA6] hover:text-white'><span><FiHelpCircle></FiHelpCircle></span> Need Help</h4>
-                        <h5 className='flex items-center gap-2 px-10 py-3 hover:bg-[#0B8BA6] hover:text-white'><span> <GoSignOut></GoSignOut></span>Sign Out</h5> 
+                    <div className='flex flex-col  pt-5  font-dm font-bold'>
+                    <Link to ='/Signin'target='_parent'>
+                        <h5 className='flex items-center gap-2 px-10  hover:bg-[#0B8BA6] hover:text-white'><span> <GoSignOut></GoSignOut></span>Sign Out</h5> 
+                        </Link>
                     </div> 
                    
                 </div>

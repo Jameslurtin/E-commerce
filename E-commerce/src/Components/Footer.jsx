@@ -8,8 +8,8 @@ import youtube from '../Images/youtube.png';
 
 const Footer = () => {
     return (
-        <footer className="bg-primary text-white py-6 text-center ">
-            <div >
+        <footer className="bg-primary text-white py-14 text-center relative ">
+            <div className='py-8' >
                 <div className='px-20  '>
                     <img className='px-12 py-3' src={logoSvg} alt="Logo" />
                 </div>
@@ -22,7 +22,7 @@ const Footer = () => {
                     <img src={instagram}></img>
                     <img src={youtube}></img>
                 </div>
-                <div className='flex gap-7 justify-center  py-2 '>
+                <div className='flex gap-7 justify-center absolute left-[550px] top-20   '>
                 
                     <ul>
                     <h1 className='font-dm font-bold py-5 '>Product</h1>

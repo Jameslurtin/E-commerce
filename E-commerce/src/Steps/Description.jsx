@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Options from '../Components/options';
 import Footer from '../Components/Footer';
 import Nav from '../Components/Nav';
@@ -17,7 +17,7 @@ import pro1 from '../Images/proreview.png';
 import pro2 from '../Images/proreview1.png';
 import pro3 from '../Images/proreview2.png';
 import { Link } from 'react-router-dom';
-
+import PopupModal from '../Components/PopupModal';
 
 const reviews = [
     {
@@ -32,31 +32,49 @@ const reviews = [
         rating: 5,
         comment: 'Excellent quality and fast delivery.',
     },
-
 ];
 
-function Description() {
+const Description = () => {
     const percentage = 90;
     const percentage1 = 85;
     const percentage2 = 70;
     const percentage3 = 60;
     const percentage4 = 40;
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [quantity, setQuantity] = useState(1);
+
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
+    const handleQuantityChange = (event) => {
+        setQuantity(parseInt(event.target.value, 10));
+    };
 
     return (
         <div>
             <Nav />
             <Options />
-            <div className='flex px-20 items-center gap-2 py-4'>
+            <div className='flex px-20 items-center gap-2 py-4 relative'>
                 <div>
-                    <img src={part} alt='Part' />
-                    <img src={part2} alt='Part2' />
-                    <img src={part3} alt='Part3' />
-                    <img src={part4} alt='Part4' />
+                    <img src={part} alt='Part' onClick={openModal} style={{ cursor: 'pointer' }} />
+                    <img src={part2} alt='Part2' onClick={openModal} style={{ cursor: 'pointer' }} />
+                    <img src={part3} alt='Part3' onClick={openModal} style={{ cursor: 'pointer' }} />
+                    <img src={part4} alt='Part4' onClick={openModal} style={{ cursor: 'pointer' }} />
                 </div>
                 <div className='flex h-[350px]'>
-                    <img src={Main} alt='Main' />
+                    <img src={Main} alt='Main' onClick={openModal} style={{ cursor: 'pointer' }} />
                 </div>
+                <PopupModal isOpen={isModalOpen} onClose={closeModal} className='absolute '>
+                    <div className='flex h-[350px]'>
+                        <img src={Main} alt='Main' />
+                    </div>
+                </PopupModal>
                 <div className='py-20 font-dm'>
                     <h1 className='font-bold'>
                         Curology the sunscreen by curology is a non-clog, grease-free (SPF 30 lotion).
@@ -106,14 +124,26 @@ function Description() {
                         Deliver to New York 10001
                     </h3>
                     <h4 className='text-[#117700] font-semibold px-5'>In Stock.</h4>
-                    <div className='flex px-5'>
-                        <button className='bg-primary text-white px-3 rounded-sm'>Qty: 1</button>
+                    <div className='flex px-5 '>
+                        <div className='flex items-center bg-primary text-white'>
+                     <h1>Qty</h1>
+                        <select
+                            value={quantity}
+                            onChange={handleQuantityChange}
+                            className='bg-primary  rounded px-3 py-2'
+                        >
+                            {[1, 2, 3, 4, 5].map((option) => (
+                                <option key={option} value={option}>
+                                    {option}
+                                </option>
+                            ))}
+                        </select>
+                        </div>
                     </div>
                     <div className='flex flex-col px-5 gap-5'>
-                   
-                        <button className='bg-primary text-white py-3  rounded-sm'> <Link to='/Address'target='_parent'>Contact supplier</Link></button>
-                        
-                        <button className='text-primary border-2 border-primary py-3 rounded-sm'>Chat now</button>
+                        <button className='bg-primary text-white py-3 rounded-sm'>
+                            <Link to='/Address' target='_parent'>Buy Now</Link>
+                        </button>
                     </div>
                     <h5 className='font-bold text-xl px-5'>Purchase details</h5>
                     <div className='flex flex-col px-5 text-primary'>
@@ -160,26 +190,19 @@ function Description() {
                     <h1>2star</h1>
                     <BarChart percentage={percentage3} />
                 </div>
-
                 <div className='flex items-center px-5'>
                     <h1>1star</h1>
                     <BarChart percentage={percentage} />
                 </div>
-
-
-
             </div>
             <div className='flex justify-center items-center text-primary font-bold text-2xl'>
                 <h1>Reviews with images</h1>
-
             </div>
-            <div className='flex justify-center gap-2'> 
-            <img src={pro1}></img>
-            <img src={pro2}></img>
-            <img src={pro3}></img>
-
+            <div className='flex justify-center gap-2'>
+                <img src={pro1}></img>
+                <img src={pro2}></img>
+                <img src={pro3}></img>
             </div>
-           
             <div className='flex flex-col gap-14 justify-center items-center'>
                 {reviews.map((review, index) => (
                     <div className='py-5 w-80' key={index}>
@@ -204,6 +227,6 @@ function Description() {
             <Footer />
         </div>
     );
-}
+};
 
 export default Description;

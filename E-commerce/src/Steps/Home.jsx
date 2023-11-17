@@ -49,9 +49,11 @@ function Home() {
                             <div >
                                 <h1 className='font-dm font-bold text-5xl'>Get the new <span className='text-[#B4856F]'>beauty buzz.</span></h1>
                                 <h2 className='text-sm font-medium py-4'>The latest, greatest & freshest from <span className='flex flex-col'>your fave brands.</span></h2>
+                                <Link to ='/product-page'target='_parent'>
                                 <button className='bg-[#99715D] px-4 py-2 rounded-md text-white hover:bg-[#785549] transition duration-300'>
                                     Shop Now
                                 </button>
+                                </Link>
                             </div>
                             <div className='flex-shrink-0 w-[741px]'>
                                 <img src={Firstimg} alt='Descriptive Alt Text' className='w-full h-auto' />
