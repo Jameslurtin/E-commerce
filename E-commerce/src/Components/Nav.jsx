@@ -19,7 +19,7 @@ function Nav() {
   };
 
   return (
-    <div className='bg-primary font-dm text-4xl text-white flex'>
+    <div className='bg-primary font-dm text-4xl text-white flex md:min-w-fit'>
       <div>
         <img className='px-12 py-3' src={logoSvg} alt="Logo" />
       </div>

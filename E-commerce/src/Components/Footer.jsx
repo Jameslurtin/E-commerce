@@ -8,7 +8,7 @@ import youtube from '../Images/youtube.png';
 
 const Footer = () => {
     return (
-        <footer className="bg-primary text-white py-14 text-center relative ">
+        <footer className="bg-primary text-white py-14 text-center relative md:min-w-fit ">
             <div className='py-8' >
                 <div className='px-20  '>
                     <img className='px-12 py-3' src={logoSvg} alt="Logo" />

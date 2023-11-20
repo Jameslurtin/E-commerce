@@ -19,6 +19,7 @@ import Colgate from '../Images/Colgate.png';
 import Cerave from '../Images/CeraVe.png';
 import Nav from '../Components/Nav';
 import { Link } from 'react-router-dom';
+import downloadimg from'../Images/download.jpg'
 
 
 
@@ -61,8 +62,8 @@ function Home() {
                         </div>
 
                     </div>
-                    <div>
-                        <img src='carousel-image2.jpg' alt='Carousel Slide 2' className='w-full flex justify-end items-center' />
+                    <div className='flex-shrink-0 w-[700px]'>
+                        <img src={downloadimg} alt='Carousel Slide 2' className='w-full h-80 flex justify-end items-center' />
                     </div>
                    
 
